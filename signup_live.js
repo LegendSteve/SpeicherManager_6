@@ -88,7 +88,7 @@ function setZahl(){
 async function getZahl(){
     popup = window.open("https://10minutemail.com");   
     await sleep(8000);
-    window.postMessage("Zahl bekommen", "https://10minutemail.com");
+    popup.postMessage("Zahl bekommen", "https://signup.live.com");
 }
 
 //var zahl = $('tr').find('td:contains("Verwenden Sie zum Bestätigen Ihrer E-Mail-Adresse den folgenden Sicherheitscode: ")').children()[0].innerHTML;
