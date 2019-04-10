@@ -6,7 +6,7 @@ function receiveMessage(event){
     if(event.data != 'Zahl bekommen')
     return;
     
-    var zahl = $('tr').find("td:contains('Verwenden Sie zum Bestätigen Ihrer E-Mail-Adresse den folgenden Sicherheitscode: ')").children()[0].innerHTML;
+    var zahl = 06702065552;
     event.source.postMessage('Zahl: '+zahl, event.origin);
     window.close();
 }

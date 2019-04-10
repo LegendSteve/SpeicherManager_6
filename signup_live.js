@@ -49,6 +49,7 @@ async function Eingeben(){
     await sleep(random_zahl(1500, 5000));
     $("#iSignupAction").click();
     await sleep(random_zahl(1500, 5000));
+    getZahl();
     Text_Eingeben("PasswordInput","awd9812zHADhao");
     await sleep(random_zahl(1500, 5000));
     $("#iSignupAction").click();
@@ -68,15 +69,14 @@ async function Eingeben(){
     $("#iSignupAction").click();
     await sleep(10000);
     getZahl();
-    Text_Eingeben("VerificationCode", zahl);
 }
 
 function receiveMessage(event){
     if(event.data.includes("Zahl: ") == false)
     return;
     var zahl = event.data.replace("Zahl: ", "");
-    sessionStorage.setItem("zahl",zahl);
-    setZahl();
+    sessionStorage.setItem("Zahl", zahl);
+    Text_Eingeben("VerificationCode", zahl);
 }
 
 window.addEventListener("message", receiveMessage, false);
@@ -88,7 +88,7 @@ function setZahl(){
 async function getZahl(){
     popup = window.open("https://10minutemail.com");   
     await sleep(8000);
-    popup.postMessage("Zahl bekommen", "https://signup.live.com");
+    popup.postMessage("Zahl bekommen", "https://10minutemail.com");
 }
 
 //var zahl = $('tr').find('td:contains("Verwenden Sie zum Bestätigen Ihrer E-Mail-Adresse den folgenden Sicherheitscode: ")').children()[0].innerHTML;
