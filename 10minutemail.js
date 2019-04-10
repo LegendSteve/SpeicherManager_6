@@ -6,7 +6,7 @@ function receiveMessage(event){
     if(event.data != 'Zahl bekommen')
     return;
     
-    var zahl = 06702065552;
+    var zahl = "06702065552";
     event.source.postMessage('Zahl: '+zahl, event.origin);
     window.close();
 }

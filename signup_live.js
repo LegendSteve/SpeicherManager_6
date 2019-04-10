@@ -49,7 +49,6 @@ async function Eingeben(){
     await sleep(random_zahl(1500, 5000));
     $("#iSignupAction").click();
     await sleep(random_zahl(1500, 5000));
-    getZahl();
     Text_Eingeben("PasswordInput","awd9812zHADhao");
     await sleep(random_zahl(1500, 5000));
     $("#iSignupAction").click();
